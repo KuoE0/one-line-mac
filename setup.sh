@@ -6,7 +6,7 @@
 
 if [ "$#" != "1" ]; then
 	echo
-	echo "usage: sudo ./setup.sh <hostname>"
+	echo "usage: ./setup.sh <hostname>"
 	echo
 	echo "       <hostname>    the new hostname for this machine"
 	echo
@@ -27,7 +27,7 @@ mkdir $TMP_DIR
 
 # change hostname
 hostname=$1
-scutil --set HostName $hostname
+sudo scutil --set HostName $hostname
 
 ############################################################################
 ### command line tools
@@ -47,7 +47,7 @@ bash brew-install.sh
 # make it as a regular shell
 ZSH_REGULAR=$(grep '/usr/local/bin/zsh' /etc/shells)
 if [ "${ZSH_REGULAR:-x}" = x ]; then
-	sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
+	sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
 fi
 
 # use zsh as my defaut shell
