@@ -51,5 +51,5 @@ if [ "${ZSH_REGULAR:-x}" = x ]; then
 fi
 
 # use zsh as my defaut shell
-chsh -s /usr/local/bin/zsh kuoe0
+chsh -s /usr/local/bin/zsh $USER
 
