@@ -6,13 +6,13 @@
 # Distributed under terms of the MIT license.
 
 function get-package-name {
-	echo $(echo $1 | cut -d ' ' -f1)
+	echo $(echo $1 | cut -d':' -f1)
 }
 
 function get-parameters {
-	Col=$(echo $1 | awk -F' ' '{print NF; exit}')
-	if [ $Col != "1" ]; then
-		echo $(echo $1 | cut -d ' ' -f2-)
+	DEL=$(echo $1 | grep -o ':' | wc -l)
+	if [ "$DEL" = "1" ]; then
+		echo $(echo $1 | cut -d':' -f2)
 	fi
 }
 
@@ -72,6 +72,9 @@ brew doctor 2>&1 | tee "$LOGDIR/brew-doctor.log"
 # install packages and applications
 if [ "$?" = "0" ]; then
 
+	# use llvm to build
+	brew --env --use-llvm
+
 	# update brew database
 	brew update
 
@@ -84,26 +87,15 @@ if [ "$?" = "0" ]; then
 	while read APP; do
 		echo "Installing $APP..."
 		PKG=$(tolower $APP)
-		brew cask install $PKG --appdir=/Applications 2>&1 | tee "$LOGDIR/$PKG.log"
-	done < cask-packages.list
+		brew cask install "$PKG" --appdir=/Applications 2>&1 | tee "$LOGDIR/$PKG.log"
+	done < brew-cask.list
 
 	# install packages from homebrew
-	while read CMD; do
-		PKG=$(get-package-name $CMD)
-		PARA=$(get-parameters $CMD)
+	while read LINE; do
+		PKG=$(get-package-name $LINE)
+		PARAM=$(get-parameters $LINE)
 		echo "Installing $PKG..."
-		brew install $PKG $PARA 2>&1 | tee "$LOGDIR/$PKG.log"
-	done < packages-core.list
-
-	# use llvm to build
-	brew --env --use-llvm
-
-	# install packages from homebrew
-	while read CMD; do
-		PKG=$(echo $CMD | cut -d' ' -f1)
-		echo "Installing $PKG..."
-		brew install $PKG $PARA 2>&1 | tee "$LOGDIR/$PKG.log"
-	done < packages.list
-
+		brew install "$PKG" "$PARAM" 2>&1 | tee "$LOGDIR/$PKG.log"
+	done < brew.list
 fi
 
