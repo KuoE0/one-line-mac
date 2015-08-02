@@ -6,13 +6,13 @@
 # Distributed under terms of the MIT license.
 
 function get-package-name {
-	echo $(echo $1 | cut -d':' -f1)
+	echo -e "$1" | cut -d':' -f1 | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//'
 }
 
 function get-parameters {
-	DEL=$(echo $1 | grep -o ':' | wc -l)
-	if [ "$DEL" = "1" ]; then
-		echo $(echo $1 | cut -d':' -f2)
+	CNT=$(echo -e "$1" | grep -o ':' | wc -l)
+	if (( $CNT == 1 )); then
+		echo -e "$1" | cut -d':' -f2 | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//'
 	fi
 }
 
@@ -92,10 +92,11 @@ if [ "$?" = "0" ]; then
 
 	# install packages from homebrew
 	while read LINE; do
-		PKG=$(get-package-name $LINE)
-		PARAM=$(get-parameters $LINE)
-		echo "Installing $PKG..."
-		brew install "$PKG" "$PARAM" 2>&1 | tee "$LOGDIR/$PKG.log"
+		PKG=$(get-package-name "$LINE")
+		PARAM=$(get-parameters "$LINE")
+		echo "PKG:   \"$PKG\""
+		echo "PARAM: \"$PARAM\""
+		bash -c "brew install $PKG $PARAM 2>&1 | tee $LOGDIR/$PKG.log"
 	done < brew.list
 fi
 
