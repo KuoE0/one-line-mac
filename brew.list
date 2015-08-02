@@ -1,6 +1,6 @@
 android-ndk
 gcc : --enable-cxx --enable-objc -enable-objcxx --enable-nls
-llvm : --with-clang --analyzer --all-targets --rtti --jit --universal
+llvm : --with-clang --analyzer --all-targets --with-rtti --jit --universal
 android-sdk
 archey
 aria2
