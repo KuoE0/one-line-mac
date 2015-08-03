@@ -5,6 +5,8 @@
 #
 # Distributed under terms of the MIT license.
 
+set -x
+
 function get-package-name {
 	echo -e "$1" | cut -d':' -f1 | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//'
 }
