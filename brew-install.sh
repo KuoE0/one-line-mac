@@ -7,19 +7,11 @@
 
 set -x
 
-function get-package-name {
-	echo -e "$1" | cut -d':' -f1 | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//'
-}
-
-function get-parameters {
-	CNT=$(echo -e "$1" | grep -o ':' | wc -l)
-	if (( $CNT == 1 )); then
-		echo -e "$1" | cut -d':' -f2 | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//'
+function get-column {
+	COLON_CNT=$(echo -e "$1" | grep ':' | wc -l)
+	if [ $(echo "$COLON_CNT + 1" | bc) -ge $2 ]; then
+		echo -e "$1" | cut -d':' -f "$2" | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//'
 	fi
-}
-
-function tolower {
-	echo $1 | tr '[:upper:]' '[:lower:]' | tr ' ' '-'
 }
 
 # create temporal directory & log directory
@@ -86,18 +78,19 @@ if [ "$?" = "0" ]; then
 
 	# install applications from homebrew-cask
 	# Install from homebrew-cask first, because there are some package need XQuartz
-	while read APP; do
-		echo "Installing $APP..."
-		PKG=$(tolower $APP)
-		brew cask install "$PKG" --appdir=/Applications 2>&1 | tee "$LOGDIR/$PKG.log"
+	while read LINE; do
+		echo "Installing $LINE"
+		APP=$(get-column "$LINE" 1)
+		echo "APP: \"$PKG\""
+		bash -c "brew cask install $APP --appdir=/Applications 2>&1 | tee $LOGDIR/$PKG.log"
 	done < brew-cask.list
 
 	# install packages from homebrew
 	while read LINE; do
-		PKG=$(get-package-name "$LINE")
-		PARAM=$(get-parameters "$LINE")
-		echo "PKG:   \"$PKG\""
-		echo "PARAM: \"$PARAM\""
+		PKG=$(get-column "$LINE" 1)
+		PARAMETER=$(get-column "$LINE" 2)
+		echo "PKG:       \"$PKG\""
+		echo "PARAMETER: \"$PARAM\""
 		bash -c "brew install $PKG $PARAM 2>&1 | tee $LOGDIR/$PKG.log"
 	done < brew.list
 fi
