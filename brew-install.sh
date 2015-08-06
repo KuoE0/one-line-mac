@@ -8,22 +8,20 @@
 set -x
 
 function get-column {
-	COLON_CNT=$(echo -e "$1" | grep ':' | wc -l)
+	COLON_CNT=$(echo "$1" | grep ':' | wc -l)
 	if [ $(echo "$COLON_CNT + 1" | bc) -ge $2 ]; then
-		echo -e "$1" | cut -d':' -f "$2" | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//'
+		echo "$1" | cut -d':' -f "$2" | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//'
 	fi
 }
 
 # create temporal directory & log directory
-TMP_DIR=/tmp/BREW-$(date +%Y%m%d-%H%M%S)
-LOGDIR="$TMP_DIR/log"
+LOG_DIR="./BREW-$(date +%Y%m%d-%H%M%S)"
 IFS=$'\n'
 
-if [ -d $TMP_DIR ] || [ -f $TMP_DIR ]; then
+if [ -d $LOG_DIR ] || [ -f $LOG_DIR ]; then
 	rm -r $TMP_DIR
 fi
-mkdir -p $TMP_DIR
-mkdir -p $LOGDIR
+mkdir -p $LOG_DIR
 
 # brew does not exist
 if ! which brew &> /dev/null; then
@@ -78,20 +76,30 @@ if [ "$?" = "0" ]; then
 
 	# install applications from homebrew-cask
 	# Install from homebrew-cask first, because there are some package need XQuartz
+	BREW_CASK_LOG_DIR=$LOG_DIR/BREW_CASK
+	mkdir -p $BREW_CASK_LOG_DIR
 	while read LINE; do
 		echo "Installing $LINE"
-		APP=$(get-column "$LINE" 1)
-		echo "APP: \"$PKG\""
-		bash -c "brew cask install $APP --appdir=/Applications 2>&1 | tee $LOGDIR/$PKG.log"
+		APP="$(get-column "$LINE" 1)"
+		FORCE_LOCATION="$(get-column "$LINE" 2)"
+		echo "APP:      \"$PKG\""
+		echo "LOCATION: \"$FORCE_LOCATIO\""
+		if [ "$FORCE_LOCATION" == "" ]; then
+			brew cask install $APP --appdir=/Applications 2>&1 | tee $BREW_CASK_LOG_DIR/$APP.log
+		else
+			brew cask install $APP 2>&1 | tee $BREW_CASK_LOG_DIR/$APP.log
+		fi
 	done < brew-cask.list
 
 	# install packages from homebrew
+	BREW_LOG_DIR=$LOG_DIR/BREW
+	mkdir -p $BREW_LOG_DIR
 	while read LINE; do
-		PKG=$(get-column "$LINE" 1)
-		PARAMETER=$(get-column "$LINE" 2)
+		PKG="$(get-column "$LINE" 1)"
+		PARAMETER="$(get-column "$LINE" 2)"
 		echo "PKG:       \"$PKG\""
-		echo "PARAMETER: \"$PARAM\""
-		bash -c "brew install $PKG $PARAM 2>&1 | tee $LOGDIR/$PKG.log"
+		echo "PARAMETER: \"$PARAMETER\""
+		brew install $PKG $PARAMETER 2>&1 | tee $BREW_LOG_DIR/$PKG.log
 	done < brew.list
 fi
 
