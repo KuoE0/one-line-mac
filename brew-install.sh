@@ -5,8 +5,6 @@
 #
 # Distributed under terms of the MIT license.
 
-set -x
-
 function get-column {
 	COLON_CNT=$(echo "$1" | grep ':' | wc -l)
 	if [ $(echo "$COLON_CNT + 1" | bc) -ge $2 ]; then

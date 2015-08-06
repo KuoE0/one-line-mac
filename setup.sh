@@ -4,8 +4,6 @@
 #
 # Distributed under terms of the MIT license.
 
-set -x
-
 if [ "$#" != "1" ]; then
 	echo
 	echo "usage: ./setup.sh <hostname>"
