@@ -17,7 +17,7 @@ LOG_DIR="./BREW-$(date +%Y%m%d-%H%M%S)"
 IFS=$'\n'
 
 if [ -d $LOG_DIR ] || [ -f $LOG_DIR ]; then
-	rm -r $TMP_DIR
+	rm -r $LOG_DIR
 fi
 mkdir -p $LOG_DIR
 
@@ -57,7 +57,7 @@ done
 
 # brew status check
 echo "Diagnose Homebrew..."
-brew doctor 2>&1 | tee "$LOGDIR/brew-doctor.log"
+brew doctor 2>&1 | tee "$LOG_DIR/brew-doctor.log"
 
 # install packages and applications
 if [ "$?" = "0" ]; then
