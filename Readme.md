@@ -1,5 +1,7 @@
-New Mac
-=======
+One Line Mac
+============
+
+Setup my Macintosh with one line command.
 
 Requirement 
 -----------
