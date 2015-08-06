@@ -84,10 +84,17 @@ if [ "$?" = "0" ]; then
 		FORCE_LOCATION="$(get-column "$LINE" 2)"
 		echo "APP:      \"$PKG\""
 		echo "LOCATION: \"$FORCE_LOCATIO\""
-		if [ "$FORCE_LOCATION" == "" ]; then
-			brew cask install $APP --appdir=/Applications 2>&1 | tee $BREW_CASK_LOG_DIR/$APP.log
-		else
-			brew cask install $APP 2>&1 | tee $BREW_CASK_LOG_DIR/$APP.log
+		brew cask install $APP --appdir=/Applications 2>&1 | tee $BREW_CASK_LOG_DIR/$APP.log
+		if [ "$FORCE_LOCATION" != "" ]; then
+			LOG_NAME=$BREW_CASK_LOG_DIR/$APP.log
+			APP_NAME="$(cat "$LOG_NAME" | tail -n 2 | head -n 1 | grep -oe "'[^\']\+'" | head -n 1 | sed -e "s/'//g")"
+			SYM_LINK="$(cat "$LOG_NAME" | tail -n 2 | head -n 1 | grep -oe "'[^\']\+'" | tail -n 1 | sed -e "s/'//g")"
+			REAL_LOCATION="$(cat "$LOG_NAME" | tail -n 1 | grep -oe "'.\+'" | sed -e "s/'//g")/$APP_NAME"
+			if [ -h "$SYM_LINK" ]; then
+				rm "$SYM_LINK"
+			fi
+			echo "Move $APP_NAME to $FORCE_LOCATION ..."
+			mv "$REAL_LOCATION" "$FORCE_LOCATION/$APP_NAME"
 		fi
 	done < brew-cask.list
 

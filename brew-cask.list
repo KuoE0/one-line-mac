@@ -33,7 +33,7 @@ sublime-text
 teamviewer
 totalterminal
 transmission
-tunnelblick
+tunnelblick : /Applications
 virtualbox
 vlc
 web-sharing
@@ -64,5 +64,5 @@ webpquicklook
 suspicious-package
 provisionql
 pacifist
-duet
+duet : /Applications
 packet-peeper
