@@ -80,8 +80,8 @@ if [ "$?" = "0" ]; then
 		echo "Installing $LINE"
 		APP="$(get-column "$LINE" 1)"
 		FORCE_LOCATION="$(get-column "$LINE" 2)"
-		echo "APP:      \"$PKG\""
-		echo "LOCATION: \"$FORCE_LOCATIO\""
+		echo "APP:      \"$APP\""
+		echo "LOCATION: \"$FORCE_LOCATION\""
 		brew cask install $APP --appdir=/Applications 2>&1 | tee $BREW_CASK_LOG_DIR/$APP.log
 		if [ "$FORCE_LOCATION" != "" ]; then
 			LOG_NAME=$BREW_CASK_LOG_DIR/$APP.log
