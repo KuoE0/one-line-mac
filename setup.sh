@@ -13,7 +13,6 @@ if [ "$#" != "1" ]; then
 	exit
 fi
 
-
 # create temporal directory
 TMP_DIR=/tmp/$(date +%Y%m%d-%H%M%S)
 if [ -d $TMP_DIR ] || [ -f $TMP_DIR ]; then
@@ -28,6 +27,21 @@ mkdir $TMP_DIR
 # change hostname
 hostname=$1
 sudo scutil --set HostName $hostname
+
+################################################################################
+### Dictionaries
+################################################################################
+
+DICT_PATH=~/Library/Dictionaries
+for DICT_ZIP in $(ls dictionaries); do
+	DICT=${DICT%.*}
+	echo "Install $DICT..."
+	unzip "dictionaries/$DICT_ZIP" -d $TMP_DIR
+	if [ -d $DICT_PATH/$DICT ] || [ -f $DICT_PATH/$DICT ]; then
+		rm -r $DICT_PATH/$DICT
+	fi
+	mv $TMP_DIR/$DICT $DICT_PATH
+done
 
 ############################################################################
 ### command line tools
