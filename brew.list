@@ -1,30 +1,25 @@
 android-ndk
-gcc : --enable-cxx --enable-objc -enable-objcxx --enable-nls
-llvm : --with-clang --analyzer --all-targets --with-rtti --jit --universal
 android-sdk
 archey
 aria2
 ascii
 aspell : --lang=en
-autoconf
-autoenv
-automake
+autoenv : ln -s /usr/local/opt/autoenv ~/.autoenv
 bash
 binutils
 bison
 boost
-brew-cask
 cairo
 ccache
 ccze
 cgdb
 clang-format
 cloc
-cmake
 colordiff
 colortail
 coreutils
 cscope
+ctags
 curl
 cv
 datamash
@@ -60,7 +55,6 @@ git
 git-extras
 git-flow
 git-lfs
-git-now : -v --zsh-completion
 glew
 glfw3
 glib
@@ -95,24 +89,6 @@ jq
 lame
 leptonica
 lesstif
-libao
-libass
-libcaca
-libcue
-libevent
-libffi
-libmagic
-libmpc
-libmpc08
-libogg
-libpng
-libtiff
-libtool
-libupnp
-libusb
-libvo-aacenc
-libvorbis
-libvpx
 little-cms2
 lua
 lynx
@@ -131,7 +107,6 @@ mpfr
 mpfr2
 neovim
 nmap
-node
 numpy
 opencore-amr
 opencv
@@ -157,8 +132,6 @@ pstree
 pv
 pypy
 pyside
-python : --framework --universal
-python3 : --framework --universal
 r
 readline
 rename
