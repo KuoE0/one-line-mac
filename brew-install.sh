@@ -47,7 +47,7 @@ if ! which brew &> /dev/null; then
 fi
 
 # add taps to homebrew
-tap_list=(caskroom/cask caskroom/versions caskroom/fonts homebrew/dupes homebrew/science homebrew/versions)
+tap_list=(caskroom/cask caskroom/homebrew-versions caskroom/homebrew-fonts homebrew/dupes homebrew/science homebrew/versions)
 
 for TAP_NAME in ${tap_list[*]}; do
 	echo "Add tap $TAP_NAME to Homebrew..."
