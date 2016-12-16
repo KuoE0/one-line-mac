@@ -1,0 +1,180 @@
+[
+	{
+		"name": "appcleaner",
+		"desc": "application uninstaller"
+	},
+	{
+		"name": "atom",
+		"desc": "text editor"
+	},
+	{
+		"name": "balsamiq-mockups",
+		"desc": "mockup design tool"
+	},
+	{
+		"name": "betterzipql",
+		"desc": "quick look for zip"
+	},
+	{
+		"name": "brow",
+		"desc": "browse the bookmarks on Google Chrome and Mozilla Firefox in Spotlight"
+	},
+	{
+		"name": "cakebrew",
+		"desc": "homebrew GUI"
+	},
+	{
+		"name": "chromium",
+		"desc": "web browser"
+	},
+	{
+		"name": "coconutbattery",
+		"desc": "battery status"
+	},
+	{
+		"name": "dropbox",
+		"desc": "Dropbox client"
+	},
+	{
+		"name": "duet",
+		"desc": "screen mirror on iPad",
+		"args": [
+			"--appdir=/Applications"
+		]
+	},
+	{
+		"name": "firefox",
+		"desc": "web browser"
+	},
+	{
+		"name": "firefoxdeveloperedition",
+		"desc": "web browser"
+	},
+	{
+		"name": "google-chrome",
+		"desc": "web browser"
+	},
+	{
+		"name": "google-chrome-canary",
+		"desc": "web browser"
+	},
+	{
+		"name": "google-drive",
+		"desc": "Google Drive client"
+	},
+	{
+		"name": "google-photos-backup",
+		"desc": "Google Photos uploader"
+	},
+	{
+		"name": "iterm2",
+		"desc": "terminal"
+	},
+	{
+		"name": "macdown",
+		"desc": "markdown editor"
+	},
+	{
+		"name": "magicprefs",
+		"desc": "touchpad utility"
+	},
+	{
+		"name": "multifirefox",
+		"desc": "allow to launch multiple Mozilla Firefox"
+	},
+	{
+		"name": "opera",
+		"desc": "web browser"
+	},
+	{
+		"name": "packet-peeper",
+		"desc": "network protocol analyzer"
+	},
+	{
+		"name": "qlcolorcode",
+		"desc": "quick look for source code with syntax highlight"
+	},
+	{
+		"name": "qlimagesize",
+		"desc": "show the size of image on title bar of quick look"
+	},
+	{
+		"name": "qlmarkdown",
+		"desc": "quick look for markdown"
+	},
+	{
+		"name": "qlprettypatch",
+		"desc": "quick look for patch"
+	},
+	{
+		"name": "qlstephen",
+		"desc": "quick look for plain text w/o file extension"
+	},
+	{
+		"name": "qlvideo",
+		"desc": "quick look for video"
+	},
+	{
+		"name": "quicklook-csv",
+		"desc": "quick look for *.csv"
+	},
+	{
+		"name": "quicklook-json",
+		"desc": "quick look for *.json"
+	},
+	{
+		"name": "rcdefaultapp",
+		"desc": "default application manager"
+	},
+	{
+		"name": "secrets",
+		"desc": "access hidden preferences on system"
+	},
+	{
+		"name": "skype",
+		"desc": "Skype client"
+	},
+	{
+		"name": "sourcetree",
+		"desc": "Git GUI"
+	},
+	{
+		"name": "startninja",
+		"desc": "sound control on boot"
+	},
+	{
+		"name": "suspicious-package",
+		"desc": "quick look *.pkg"
+	},
+	{
+		"name": "teamviewer",
+		"desc": "Teamviewer client"
+	},
+	{
+		"name": "tunnelblick",
+		"desc": "VPN tool",
+		"args": [
+			"--appdir=/Applications"
+		]
+	},
+	{
+		"name": "webpquicklook",
+		"desc": "quick look for *.webp"
+	},
+	{
+		"name": "welly",
+		"desc": "BBS client"
+	},
+	{
+		"name": "writefull",
+		"desc": "writing assistant"
+	},
+	{
+		"name": "xquartz",
+		"desc": "X Window System"
+	},
+	{
+		"name": "xtrafinder",
+		"desc": "Finder enhancement"
+	}
+]
