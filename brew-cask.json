@@ -176,5 +176,9 @@
 	{
 		"name": "xtrafinder",
 		"desc": "Finder enhancement"
+	},
+	{
+		"name": "xld",
+		"desc": "X Lossless Decoder / Lossless audio decoder for Mac OS X"
 	}
 ]
