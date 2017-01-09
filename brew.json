@@ -218,6 +218,10 @@
 		"desc": "fetch system information"
 	},
 	{
+		"name": "s-search",
+		"desc": "search on the web in the terminal"
+	},
+	{
 		"name": "sdcv",
 		"desc": "console version of StarDict (dictionary)"
 	},
