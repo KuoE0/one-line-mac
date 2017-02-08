@@ -180,5 +180,13 @@
 	{
 		"name": "xld",
 		"desc": "X Lossless Decoder / Lossless audio decoder for Mac OS X"
+	},
+	{
+		"name": "spotify",
+		"desc": "Online music"
+	},
+	{
+		"name": "spotify-notifications",
+		"desc": "Notification for Spotify"
 	}
 ]
