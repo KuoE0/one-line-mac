@@ -20,7 +20,8 @@ def run_brew_tap(tap_list)
 end
 
 def run_brew_install(pkg_name, pkg_args)
-	cmd_list = ['brew', 'install', pkg_name]
+	# use `reinstall` to ignore previously install for dependency
+	cmd_list = ['brew', 'reinstall', pkg_name]
 	if !pkg_args.nil?
 		cmd_list.push(*pkg_args)
 	end
