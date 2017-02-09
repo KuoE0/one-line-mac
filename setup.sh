@@ -58,7 +58,30 @@ fi
 ### Homebrew
 ################################################################################
 
-bash brew-install.sh
+# brew does not exist
+if ! which brew &> /dev/null; then
+	# install homebrew
+	echo "Install Homebrew..."
+	# send ENTER keystroke to install automatically
+	echo | ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# homebrew install failed
+if ! which brew &> /dev/null; then
+	echo "Homebrew failed to install!"
+	exit 255
+else
+	brew doctor
+	if [ "$?" = "0" ]; then
+		echo "Start to install package with Homebrew..."
+		# use llvm to build
+		brew --env --use-llvm
+		ruby installBrewPackage.rb
+	else
+		echo "Something going wrong with Homebrew!"
+		exit 255
+	fi
+fi
 
 ################################################################################
 ### Shell
