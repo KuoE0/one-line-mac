@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Copyright (C) 2013 KuoE0 <kuoe0.tw@gmail.com>
+# Copyright (C) 2017 KuoE0 <kuoe0.tw@gmail.com>
 #
 # Distributed under terms of the MIT license.
 
@@ -43,21 +43,26 @@ for DICT_ZIP in $(ls dictionaries); do
 	mv $TMP_DIR/$DICT $DICT_PATH
 done
 
-############################################################################
+################################################################################
 ### command line tools
-############################################################################
+################################################################################
+xcode-select -p > /dev/null 2>&1
+if [ "$?" != "0" ]; then
+	echo "Installing Xcode Command Line Tools..."
+	osascript installCommandLineTools.AppleScript
+else
+	echo "Xcode already installed."
+fi
 
-osascript CLItools.AppleScript
-
-############################################################################
+################################################################################
 ### Homebrew
-############################################################################
+################################################################################
 
 bash brew-install.sh
 
-############################################################################
+################################################################################
 ### Shell
-############################################################################
+################################################################################
 # make it as a regular shell
 ZSH_REGULAR=$(grep '/usr/local/bin/zsh' /etc/shells)
 if [ "${ZSH_REGULAR:-x}" = x ]; then
@@ -66,4 +71,3 @@ fi
 
 # use zsh as my defaut shell
 chsh -s /usr/local/bin/zsh $USER
-
