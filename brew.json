@@ -123,8 +123,12 @@
         "message": [
             "Please read the following document to codesign GDB!",
             "    https://gcc.gnu.org/onlinedocs/gnat_ugn/Codesigning-the-Debugger.html",
+            "",
             "And then, add your username into _developer group (use the following command)",
-            "    sudo dseditgroup -o edit -a $USER -t user _developer"
+            "    sudo dseditgroup -o edit -a $USER -t user _developer",
+            "",
+            "On 10.12 (Sierra) or later with SIP, you need to run this:",
+            "    echo 'set startup-with-shell off' >> ~/.gbdinit"
         ]
     },
     {
@@ -204,7 +208,10 @@
     },
     {
         "name": "node",
-        "desc": "NodeJS"
+        "desc": "NodeJS",
+        "args": [
+            "--with-full-icu"
+        ]
     },
     {
         "name": "p7zip",
