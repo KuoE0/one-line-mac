@@ -173,12 +173,13 @@
     {
         "name": "llvm",
         "args": [
-            "--with-clang",
-            "--analyzer",
-            "--all-targets",
-            "--with-rtti",
-            "--jit",
-            "--universal"
+            "--universal",
+            "--with-graphviz",
+            "--with-lldb",
+            "--with-ocaml",
+            "--with-python",
+            "--with-shared-libs",
+            "--with-toolchain"
         ]
     },
     {
