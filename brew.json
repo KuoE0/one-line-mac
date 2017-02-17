@@ -199,7 +199,10 @@
     {
         "name": "neovim",
         "tap": "neovim/neovim",
-        "desc": "new generation Vim"
+        "desc": "new generation Vim",
+        "do_after": [
+            "ln -s /usr/local/bin/nvim /usr/local/bin/vim"
+        ]
     },
     {
         "name": "nmap",
