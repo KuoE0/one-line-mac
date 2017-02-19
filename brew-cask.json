@@ -52,6 +52,36 @@
         "desc": "web browser"
     },
     {
+        "name": "font-fira-code"
+    },
+    {
+        "name": "font-fira-mono"
+    },
+    {
+        "name": "font-fira-sans"
+    },
+    {
+        "name": "font-firacode-nerd-font"
+    },
+    {
+        "name": "font-firacode-nerd-font-mono"
+    },
+    {
+        "name": "font-firamono-nerd-font"
+    },
+    {
+        "name": "font-firamono-nerd-font-mono"
+    },
+    {
+        "name": "font-inconsolata"
+    },
+    {
+        "name": "font-inconsolata-nerd-font"
+    },
+    {
+        "name": "font-inconsolata-nerd-font-mono"
+    },
+    {
         "name": "google-chrome",
         "desc": "web browser"
     },
