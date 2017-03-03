@@ -33,15 +33,7 @@ sudo scutil --set HostName $hostname
 ################################################################################
 
 DICT_PATH=~/Library/Dictionaries
-for DICT_ZIP in $(ls dictionaries); do
-	DICT=${DICT%.*}
-	echo "Install $DICT..."
-	unzip "dictionaries/$DICT_ZIP" -d $TMP_DIR
-	if [ -d $DICT_PATH/$DICT ] || [ -f $DICT_PATH/$DICT ]; then
-		rm -r $DICT_PATH/$DICT
-	fi
-	mv $TMP_DIR/$DICT $DICT_PATH
-done
+cp -r dictionaries/* "$DICT_PATH"
 
 ################################################################################
 ### command line tools
