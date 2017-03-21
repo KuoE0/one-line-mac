@@ -224,6 +224,10 @@
         "desc": "format converter"
     },
     {
+        "name": "pastebinit",
+        "desc": "paste text to pastebin.com or other services"
+    },
+    {
         "name": "patchutils",
         "desc": "patch operation utilities"
     },
