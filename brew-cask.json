@@ -48,7 +48,7 @@
         "desc": "web browser"
     },
     {
-        "name": "firefoxdeveloperedition",
+        "name": "firefoxnightly",
         "desc": "web browser"
     },
     {
@@ -82,20 +82,16 @@
         "name": "font-inconsolata-nerd-font-mono"
     },
     {
+        "name": "google-backup-and-sync",
+        "desc": "Google Drive client"
+    },
+    {
         "name": "google-chrome",
         "desc": "web browser"
     },
     {
         "name": "google-chrome-canary",
         "desc": "web browser"
-    },
-    {
-        "name": "google-drive",
-        "desc": "Google Drive client"
-    },
-    {
-        "name": "google-photos-backup",
-        "desc": "Google Photos uploader"
     },
     {
         "name": "insomniax",
@@ -208,6 +204,10 @@
     {
         "name": "tunnelblick",
         "desc": "VPN tool"
+    },
+    {
+        "name": "vivaldi",
+        "desc": "Vivaldi web browser"
     },
     {
         "name": "webpquicklook",
