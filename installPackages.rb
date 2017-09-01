@@ -70,6 +70,15 @@ def run_brew_cask_install(pkg_name, pkg_args)
 	run_system_cmd(cmd)
 end
 
+def run_pip3_install(pkg_name, pkg_args)
+	cmd_list = ['pip3', 'install', pkg_name]
+	if !pkg_args.nil?
+		cmd_list.push(*pkg_args)
+	end
+	cmd = cmd_list.join(' ')
+	run_system_cmd(cmd)
+end
+
 run_system_cmd("brew update")
 
 tap_list = ["caskroom/cask", "caskroom/versions", "caskroom/fonts", "neovim/neovim"]
@@ -79,6 +88,7 @@ message_list = Hash.new
 
 message_list = message_list.merge(install(method(:run_brew_install), 'brew.json'))
 message_list = message_list.merge(install(method(:run_brew_cask_install), 'brew-cask.json'))
+message_list = message_list.merge(install(method(:run_pip3_install), 'pip3.json'))
 
 message_list.keys.each do |pkg_name|
 	puts "=== Note for #{pkg_name} ==="

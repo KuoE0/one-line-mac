@@ -58,15 +58,15 @@ if ! which brew &> /dev/null; then
 else
 	brew doctor
 	if [ "$?" = "0" ]; then
-		echo "Start to install package with Homebrew..."
 		# use llvm to build
 		brew --env --use-llvm
-		ruby installBrewPackage.rb
 	else
 		echo "Something going wrong with Homebrew!"
 		exit 255
 	fi
 fi
+
+ruby installPackages.rb
 
 ################################################################################
 ### Shell

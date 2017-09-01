@@ -1,0 +1,10 @@
+[
+    {
+        "name": "virtualenv",
+        "desc": "virtual Python environment builder"
+    },
+    {
+        "name": "zdict",
+        "desc": "CLI dictionay"
+    }
+]
