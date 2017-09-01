@@ -11,6 +11,38 @@ def run_system_cmd(cmd)
 	system(cmd)
 end
 
+def install(install_func, filename)
+	message_list = Hash.new
+	package_file = File.read(filename) # read file
+	package_list = JSON.parse(package_file) # parse JSON
+	package_list = package_list.sort_by { |f| f["name"] } # sort
+	for pkg in package_list
+		name = pkg["name"]
+		args = pkg["args"]
+		do_before = pkg["do_before"]
+		do_after = pkg["do_after"]
+		message = pkg["message"]
+
+		if !do_before.nil?
+			for cmd in do_before
+				run_system_cmd(cmd)
+			end
+		end
+		install_func.call(name, args)
+		if !do_after.nil?
+			for cmd in do_after
+				run_system_cmd(cmd)
+			end
+		end
+
+		if !message.nil?
+			message_list[name] = message
+		end
+	end
+
+	return message_list
+end
+
 def run_brew_tap(tap_list)
 	for tap in tap_list
 		cmd = "brew tap #{tap}"
@@ -45,62 +77,8 @@ run_brew_tap(tap_list)
 
 message_list = Hash.new
 
-# Install command line tools from Homebrew
-brew_package_file = File.read('brew.json') # read file
-brew_package_list = JSON.parse(brew_package_file) # parse JSON
-brew_package_list = brew_package_list.sort_by { |f| f["name"] } # sort
-
-for pkg in brew_package_list
-	name = pkg["name"]
-	args = pkg["args"]
-	do_before = pkg["do_before"]
-	do_after = pkg["do_after"]
-	message = pkg["message"]
-
-	if !do_before.nil?
-		for cmd in do_before
-			run_system_cmd(cmd)
-		end
-	end
-	run_brew_install(name, args)
-	if !do_after.nil?
-		for cmd in do_after
-			run_system_cmd(cmd)
-		end
-	end
-
-	if !message.nil?
-		message_list[name] = message
-	end
-end
-
-# Install macOS applications from Homebrew
-cask_package_file = File.read('brew-cask.json') # read file
-cask_package_list = JSON.parse(cask_package_file) # parse JSON
-cask_package_list = cask_package_list.sort_by { |f| f["name"] } # sort
-for pkg in cask_package_list
-	name = pkg["name"]
-	args = pkg["args"]
-	do_before = pkg["do_before"]
-	do_after = pkg["do_after"]
-	message = pkg["message"]
-
-	if !do_before.nil?
-		for cmd in do_before
-			run_system_cmd(cmd)
-		end
-	end
-	run_brew_cask_install(name, args)
-	if !do_after.nil?
-		for cmd in do_after
-			run_system_cmd(cmd)
-		end
-	end
-
-	if !message.nil?
-		message_list[name] = message
-	end
-end
+message_list = message_list.merge(install(method(:run_brew_install), 'brew.json'))
+message_list = message_list.merge(install(method(:run_brew_cask_install), 'brew-cask.json'))
 
 message_list.keys.each do |pkg_name|
 	puts "=== Note for #{pkg_name} ==="
