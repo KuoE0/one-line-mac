@@ -20,17 +20,17 @@ if [ -d $TMP_DIR ] || [ -f $TMP_DIR ]; then
 fi
 mkdir $TMP_DIR
 
-################################################################################
+###
 ### System Setup
-################################################################################
+###
 
 # change hostname
 hostname=$1
 sudo scutil --set HostName $hostname
 
-################################################################################
-### command line tools
-################################################################################
+###
+### Command Line Tools
+###
 xcode-select -p > /dev/null 2>&1
 if [ "$?" != "0" ]; then
 	echo "Installing Xcode Command Line Tools..."
@@ -39,9 +39,9 @@ else
 	echo "Xcode already installed."
 fi
 
-################################################################################
-### Homebrew
-################################################################################
+###
+### Command Line Setup
+###
 
 # brew does not exist
 if ! which brew &> /dev/null; then
@@ -66,15 +66,16 @@ else
 	fi
 fi
 
+# install command line packages
 ruby installPackages.rb
 
-################################################################################
-### Shell
-################################################################################
-# make it as a regular shell
-ZSH_REGULAR=$(grep '/usr/local/bin/zsh' /etc/shells)
-if [ "${ZSH_REGULAR:-x}" = x ]; then
-	sudo sh -c "echo '/usr/local/bin/zsh' >> /etc/shells"
+# make zsh as a regular shell
+ZSH_PATH="/usr/local/bin/zsh"
+if [ -e "$ZSH_PATH" ]; then
+	ZSH_REGULAR=$(grep "$ZSH_PATH" /etc/shells)
+	if [ "${ZSH_REGULAR:-x}" = x ]; then
+		sudo sh -c "echo $ZSH_PATH >> /etc/shells"
+	fi
 fi
 
 # use zsh as my defaut shell
