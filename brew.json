@@ -62,6 +62,9 @@
         "desc": "convert text file format from dos to unix"
     },
     {
+        "name": "emacs-mac"
+    },
+    {
         "name": "enca",
         "desc": "text encoding detector/converter"
     },

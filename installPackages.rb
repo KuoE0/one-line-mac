@@ -81,7 +81,11 @@ end
 
 run_system_cmd("brew update")
 
-tap_list = ["caskroom/cask", "caskroom/versions", "caskroom/fonts", "neovim/neovim"]
+tap_list = ["caskroom/cask",
+            "caskroom/versions",
+            "caskroom/fonts",
+            "neovim/neovim",
+            "railwaycat/emacsmacport"]
 run_brew_tap(tap_list)
 
 message_list = Hash.new

@@ -40,6 +40,10 @@
         "desc": "screen mirror on iPad"
     },
     {
+        "name": "emacs-mac-spacemacs-icon",
+        "desc": "emacs for mac with spacemacs icon"
+    },
+    {
         "name": "evernote",
         "desc": "Evernote client"
     },
