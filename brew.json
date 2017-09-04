@@ -80,7 +80,6 @@
             "--with-freetype",
             "--with-frei0r",
             "--with-libass",
-            "--with-libvo-aacenc",
             "--with-libvpx",
             "--with-opencore-amr",
             "--with-openjpeg",
