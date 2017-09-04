@@ -29,7 +29,7 @@ hostname=$1
 sudo scutil --set HostName $hostname
 
 ###
-### Command Line Tools
+### Xcode
 ###
 xcode-select -p > /dev/null 2>&1
 if [ "$?" != "0" ]; then
@@ -37,6 +37,8 @@ if [ "$?" != "0" ]; then
 	osascript installCommandLineTools.AppleScript
 else
 	echo "Xcode already installed."
+	# Auto accept Xcode license
+	sudo xcodebuild -license accept
 fi
 
 ###
