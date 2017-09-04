@@ -111,10 +111,8 @@
     {
         "name": "gcc",
         "args": [
-            "--enable-cxx",
-            "--enable-objc",
-            "-enable-objcxx",
-            "--enable-nls"
+            "--with-jit",
+            "--with-nls"
         ]
     },
     {
