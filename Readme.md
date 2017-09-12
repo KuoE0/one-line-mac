@@ -10,3 +10,4 @@ Setup my macOS with one line command.
 		- Check the checkbox
 - Create a certificate for lldb to make "--with-lldb" work when installing llvm.
     - See [https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt](https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt)
+- Prepare the ssh key
