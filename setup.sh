@@ -91,3 +91,6 @@ fi
 
 # use zsh as my defaut shell
 chsh -s /usr/local/bin/zsh $USER
+
+# setup dotfiles
+curl https://raw.githubusercontent.com/kuoe0/kuoe0-dotfile/master/setup.sh | bash -s $HOME/Works
