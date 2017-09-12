@@ -33,3 +33,4 @@ if __name__ == "__main__":
 
     with open(filename, 'w') as f:
         f.write(sorted_data)
+        f.write('\n')
