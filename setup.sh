@@ -71,6 +71,15 @@ fi
 # install command line packages
 ruby installPackages.rb
 
+# install applications from Mac App Store
+if ! mas account &> /dev/null; then
+	# sign in
+	echo -n "Enter your Apple ID: "
+	read APPLE_ID
+	mas signin --dialog $APPLE_ID
+fi
+ruby installApplications.rb
+
 # make zsh as a regular shell
 ZSH_PATH="/usr/local/bin/zsh"
 if [ -e "$ZSH_PATH" ]; then

@@ -185,6 +185,10 @@
         "desc": "Vim for macOS"
     },
     {
+        "name": "mas",
+        "desc": "Mac App Store command line interface"
+    },
+    {
         "name": "mercurial",
         "desc": "version control system"
     },

@@ -1,0 +1,78 @@
+[
+    {
+        "name": "Amphetamine",
+        "id": "937984704",
+        "dese": "Energy saving utility"
+    },
+    {
+        "name": "Bumpr",
+        "id": "1166066070",
+        "desc": "Multiple browser utility"
+    },
+    {
+        "name": "Keynote",
+        "id": "409183694"
+    },
+    {
+        "name": "LINE",
+        "id": "539883307",
+        "desc": "IM application"
+    },
+    {
+        "name": "LastPass",
+        "id": "926036361",
+        "desc": "Password manager"
+    },
+    {
+        "name": "MoneyWiz 2",
+        "id": "949724400",
+        "dese": "finance record"
+    },
+    {
+        "name": "Moom",
+        "id": "419330170",
+        "desc": "Window manager"
+    },
+    {
+        "name": "Movist",
+        "id": "461788075",
+        "desc": "Video player"
+    },
+    {
+        "name": "Pixelmator",
+        "id": "407963104",
+        "desc": "photo editor"
+    },
+    {
+        "name": "Pocket",
+        "id": "568494494"
+    },
+    {
+        "name": "PopClip",
+        "id": "445189367",
+        "desc": "Mouse pop-up utility"
+    },
+    {
+        "name": "Spark",
+        "id": "1176895641",
+        "desc": "Email client"
+    },
+    {
+        "name": "The Unarchiver",
+        "id": "425424353 "
+    },
+    {
+        "name": "VPN Unlimited",
+        "id": "727593140"
+    },
+    {
+        "name": "Wunderlist",
+        "id": "410628904",
+        "desc": "To-do list application"
+    },
+    {
+        "name": "Yoink",
+        "id": "457622435",
+        "desc": "Copy/paste utility"
+    }
+]
