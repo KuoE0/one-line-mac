@@ -13,13 +13,6 @@ if [ "$#" != "1" ]; then
 	exit
 fi
 
-# create temporal directory
-TMP_DIR=/tmp/$(date +%Y%m%d-%H%M%S)
-if [ -d $TMP_DIR ] || [ -f $TMP_DIR ]; then
-	rm -r $TMP_DIR
-fi
-mkdir $TMP_DIR
-
 ###
 ### System Setup
 ###
