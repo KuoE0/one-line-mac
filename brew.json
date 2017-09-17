@@ -92,7 +92,8 @@
             "--with-speex",
             "--with-sdl2",
             "--with-theora",
-            "--with-tools"
+            "--with-tools",
+            "--with-x265"
         ]
     },
     {
