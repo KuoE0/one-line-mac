@@ -106,6 +106,10 @@
         "desc": "terminal"
     },
     {
+        "name": "ksdiff",
+        "desc": "Kaleidoscope command line tool"
+    },
+    {
         "name": "licecap",
         "desc": "GIF recorder"
     },
