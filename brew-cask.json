@@ -98,6 +98,10 @@
         "desc": "web browser"
     },
     {
+        "name": "iina",
+        "desc": "The modern video player for macOS."
+    },
+    {
         "name": "insomniax",
         "desc": "Disable the sleep mode"
     },
