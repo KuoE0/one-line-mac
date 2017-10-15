@@ -43,6 +43,11 @@
         "desc": "Video player"
     },
     {
+        "name": "PhotoBulk",
+        "id": "537211143",
+        "desc": "Batch photo processor"
+    },
+    {
         "name": "Pixelmator",
         "id": "407963104",
         "desc": "photo editor"
