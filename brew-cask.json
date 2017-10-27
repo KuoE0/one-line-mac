@@ -198,10 +198,6 @@
         "desc": "Notification for Spotify"
     },
     {
-        "name": "startninja",
-        "desc": "sound control on boot"
-    },
-    {
         "name": "steam",
         "desc": "Steam client"
     },
