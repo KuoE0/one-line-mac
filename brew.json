@@ -145,6 +145,10 @@
         "desc": "Git repo management tool"
     },
     {
+        "name": "googler",
+        "desc": "Google search CLI client"
+    },
+    {
         "name": "gource",
         "desc": "version control visualization tool"
     },
