@@ -11,3 +11,13 @@ Setup my macOS with one line command.
 - Create a certificate for lldb to make "--with-lldb" work when installing llvm.
     - See [https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt](https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt)
 - Prepare the ssh key
+
+## Other
+
+### Use Touch ID to authenticate `sudo` command
+
+Add the following line to the top of /etc/pam.d/sudo.
+
+```
+auth sufficient pam_tid.so
+```
