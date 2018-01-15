@@ -24,6 +24,10 @@
         "desc": "homebrew GUI"
     },
     {
+        "name": "caprine",
+        "desc": "Unofficial Facebook Messenger client"
+    },
+    {
         "name": "chromium",
         "desc": "web browser"
     },
