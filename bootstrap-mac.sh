@@ -6,7 +6,7 @@
 
 if [ "$#" != "1" ]; then
 	echo
-	echo "usage: ./setup.sh <hostname>"
+	echo "usage: ./boostrap-mac.sh <hostname>"
 	echo
 	echo "       <hostname>    the new hostname for this machine"
 	echo
