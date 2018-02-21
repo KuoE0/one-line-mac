@@ -1,0 +1,32 @@
+[
+    {
+        "name": "curl"
+    },
+    {
+        "name": "git-core"
+    },
+    {
+        "name": "make"
+    },
+    {
+        "name": "mosh"
+    },
+    {
+        "name": "net-tools"
+    },
+    {
+        "name": "openssh-server"
+    },
+    {
+        "name": "vim"
+    },
+    {
+        "name": "ruby"
+    },
+    {
+        "name": "wget"
+    },
+    {
+        "name": "zsh"
+    }
+]
