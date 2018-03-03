@@ -16,10 +16,6 @@
         "desc": "quick look for zip"
     },
     {
-        "name": "brow",
-        "desc": "browse the bookmarks on Google Chrome and Mozilla Firefox in Spotlight"
-    },
-    {
         "name": "cakebrew",
         "desc": "homebrew GUI"
     },
@@ -50,14 +46,6 @@
     {
         "name": "evernote",
         "desc": "Evernote client"
-    },
-    {
-        "name": "firefox",
-        "desc": "web browser"
-    },
-    {
-        "name": "firefoxnightly",
-        "desc": "web browser"
     },
     {
         "name": "font-fira-code"
@@ -128,10 +116,6 @@
     {
         "name": "magicprefs",
         "desc": "touchpad utility"
-    },
-    {
-        "name": "multifirefox",
-        "desc": "allow to launch multiple Mozilla Firefox"
     },
     {
         "name": "opera",
