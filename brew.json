@@ -275,6 +275,10 @@
         "desc": "rename utility"
     },
     {
+        "name": "rsync",
+        "desc": "Latest version of rsync"
+    },
+    {
         "name": "s-search",
         "desc": "search on the web in the terminal"
     },
