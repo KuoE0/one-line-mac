@@ -348,6 +348,10 @@
         "desc": "tool to convert XML files to other formats"
     },
     {
+        "name": "yarn",
+        "desc": "dependency manager"
+    },
+    {
         "name": "youtube-dl",
         "desc": "download audio/video on YouTube"
     },
