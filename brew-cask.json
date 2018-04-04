@@ -78,6 +78,18 @@
         "name": "font-inconsolata-nerd-font-mono"
     },
     {
+        "name": "font-roboto"
+    },
+    {
+        "name": "font-roboto-condensed"
+    },
+    {
+        "name": "font-roboto-mono"
+    },
+    {
+        "name": "font-roboto-slab"
+    },
+    {
         "name": "google-backup-and-sync",
         "desc": "Google Drive client"
     },
