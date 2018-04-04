@@ -48,6 +48,9 @@
         "desc": "Evernote client"
     },
     {
+        "name": "font-abril-fatface"
+    },
+    {
         "name": "font-fira-code"
     },
     {
@@ -78,6 +81,15 @@
         "name": "font-inconsolata-nerd-font-mono"
     },
     {
+        "name": "font-josefin-sans"
+    },
+    {
+        "name": "font-josefin-slab"
+    },
+    {
+        "name": "font-lato"
+    },
+    {
         "name": "font-noto-mono"
     },
     {
@@ -93,6 +105,18 @@
         "name": "font-noto-serif-cjk"
     },
     {
+        "name": "font-old-standard-tt"
+    },
+    {
+        "name": "font-open-sans"
+    },
+    {
+        "name": "font-open-sans-condensed"
+    },
+    {
+        "name": "font-pt-serif"
+    },
+    {
         "name": "font-roboto"
     },
     {
@@ -103,6 +127,9 @@
     },
     {
         "name": "font-roboto-slab"
+    },
+    {
+        "name": "font-ubuntu"
     },
     {
         "name": "google-backup-and-sync",
