@@ -78,6 +78,21 @@
         "name": "font-inconsolata-nerd-font-mono"
     },
     {
+        "name": "font-noto-mono"
+    },
+    {
+        "name": "font-noto-sans"
+    },
+    {
+        "name": "font-noto-sans-cjk-tc"
+    },
+    {
+        "name": "font-noto-serif"
+    },
+    {
+        "name": "font-noto-serif-cjk"
+    },
+    {
         "name": "font-roboto"
     },
     {
