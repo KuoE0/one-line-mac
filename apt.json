@@ -6,6 +6,9 @@
         "name": "git-core"
     },
     {
+        "name": "linuxbrew-wrapper"
+    },
+    {
         "name": "make"
     },
     {
