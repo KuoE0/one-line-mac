@@ -6,6 +6,9 @@
         "name": "git-core"
     },
     {
+        "name": "gnome-tweak-tool"
+    },
+    {
         "name": "htop"
     },
     {
