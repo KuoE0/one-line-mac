@@ -2,7 +2,7 @@
     {
         "name": "Amphetamine",
         "id": "937984704",
-        "dese": "Energy saving utility"
+        "desc": "Energy saving utility"
     },
     {
         "name": "Better Rename 10",
@@ -30,7 +30,7 @@
     {
         "name": "MoneyWiz 2",
         "id": "949724400",
-        "dese": "finance record"
+        "desc": "finance record"
     },
     {
         "name": "Moom",
