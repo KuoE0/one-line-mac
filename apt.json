@@ -6,6 +6,9 @@
         "name": "git-core"
     },
     {
+        "name": "htop"
+    },
+    {
         "name": "linuxbrew-wrapper"
     },
     {
@@ -21,10 +24,10 @@
         "name": "openssh-server"
     },
     {
-        "name": "vim"
+        "name": "ruby"
     },
     {
-        "name": "ruby"
+        "name": "vim"
     },
     {
         "name": "wget"
