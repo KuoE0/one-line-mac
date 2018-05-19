@@ -69,8 +69,8 @@
         "desc": "text encoding detector/converter"
     },
     {
-        "name": "exiftags",
-        "desc": "EXIF viewer"
+        "name": "exiftool",
+        "desc": "EXIF viewer and editor"
     },
     {
         "name": "fasd",
