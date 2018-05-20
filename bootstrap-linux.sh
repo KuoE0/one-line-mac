@@ -57,4 +57,4 @@ ruby installPackages.rb
 chsh -s /bin/zsh $USER
 
 # setup dotfiles
-curl https://raw.githubusercontent.com/kuoe0/kuoe0-dotfile/master/setup.sh | bash -s $HOME/Works
+curl https://raw.githubusercontent.com/kuoe0/kuoe0-dotfile/master/setup.sh | /bin/bash -s $HOME/Works
