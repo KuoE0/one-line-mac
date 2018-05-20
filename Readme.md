@@ -4,6 +4,7 @@ Setup my macOS with one line command.
 
 ## Requirement
 
+- Setup SSH key to allow to access GitHub repo.
 - Make terminal have the permission with accessibility.
 	- System Preferences → Security & Privacy → (Tab) Privacy → Accessibility
 		- Add Terminal.app
