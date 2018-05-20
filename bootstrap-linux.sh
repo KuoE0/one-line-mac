@@ -24,6 +24,29 @@ echo "$hostname" | sudo tee /etc/hostname
 # install apt tools
 python3 installAptPackage.py3
 
+# brew does not exist
+if ! which brew &> /dev/null; then
+	# install homebrew
+	echo "Install Homebrew..."
+	# send ENTER keystroke to install automatically
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+fi
+
+# homebrew install failed
+if ! which brew &> /dev/null; then
+	echo "Homebrew failed to install!"
+	exit 255
+else
+	brew doctor
+	if [ "$?" != "0" ]; then
+		echo "Something going wrong with Homebrew!"
+		exit 255
+	fi
+fi
+
+# install command line packages
+ruby installPackages.rb
+
 # use zsh as my defaut shell
 chsh -s /usr/local/bin/zsh $USER
 
