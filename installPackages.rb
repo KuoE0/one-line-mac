@@ -90,9 +90,9 @@ run_brew_tap(tap_list)
 
 message_list = Hash.new
 
-message_list = message_list.merge(install(method(:run_brew_install), 'brew.json'))
-message_list = message_list.merge(install(method(:run_brew_cask_install), 'brew-cask.json'))
-message_list = message_list.merge(install(method(:run_pip3_install), 'pip3.json'))
+message_list = message_list.merge(install(method(:run_brew_install), 'list-brew.json'))
+message_list = message_list.merge(install(method(:run_brew_cask_install), 'list-brew-cask.json'))
+message_list = message_list.merge(install(method(:run_pip3_install), 'list-pip3.json'))
 
 message_list.keys.each do |pkg_name|
     puts "=== Note for #{pkg_name} ==="

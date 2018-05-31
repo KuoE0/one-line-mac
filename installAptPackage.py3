@@ -16,7 +16,7 @@
 import json
 import os
 
-with open('apt.json') as f:
+with open('list-apt.json') as f:
     package_list = json.load(f)
     package_list = ' '.join([p['name'] for p in package_list])
     cmd = ' '.join(['sudo', 'apt', 'install', package_list])

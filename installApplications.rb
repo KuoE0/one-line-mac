@@ -22,4 +22,4 @@ def install_mas_application(filename)
     end
 end
 
-install_mas_application('mas.json')
+install_mas_application('list-mas.json')
