@@ -3,6 +3,9 @@
         "name": "curl"
     },
     {
+        "name": "gcin"
+    },
+    {
         "name": "git-core"
     },
     {
@@ -30,7 +33,20 @@
         "name": "openssh-server"
     },
     {
+        "name": "python-pip"
+    },
+    {
+        "name": "python3-pip"
+    },
+    {
         "name": "ruby"
+    },
+    {
+        "name": "shutter",
+        "desc": "screenshot application"
+    },
+    {
+        "name": "spotify"
     },
     {
         "name": "trash-cli"
@@ -40,6 +56,10 @@
     },
     {
         "name": "wget"
+    },
+    {
+        "name": "x-tile",
+        "desc": "window arrangement"
     },
     {
         "name": "xrdp",
