@@ -8,20 +8,16 @@
 #
 
 if [ "$#" != "1" ]; then
-	echo
-	echo "usage: ./setup.sh <hostname>"
-	echo
-	echo "       <hostname>    the new hostname for this machine"
-	echo
-	exit
+	echo -n "Enter the new hostname (leave empty to not set the hostname): "
+	read HOSTNAME
 fi
 
 OS=$(uname -s)
 
 if [ "$OS" = "Darwin" ]; then
 	echo "Bootstrapping macOS..."
-	bash bootstrap-mac.sh "$1"
+	bash bootstrap-mac.sh "$HOSTNAME"
 else
 	echo "Bootstrapping Linux..."
-	bash bootstrap-linux.sh "$1"
+	bash bootstrap-linux.sh "$HOSTNAME"
 fi

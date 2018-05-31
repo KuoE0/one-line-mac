@@ -4,22 +4,15 @@
 #
 # Distributed under terms of the MIT license.
 
-if [ "$#" != "1" ]; then
-	echo
-	echo "usage: ./boostrap-mac.sh <hostname>"
-	echo
-	echo "       <hostname>    the new hostname for this machine"
-	echo
-	exit
-fi
-
 ###
 ### System Setup
 ###
 
-# change hostname
-hostname=$1
-sudo scutil --set HostName $hostname
+if [ "$1" != "" ]; then
+	# change hostname
+	HOSTNAME=$1
+	sudo scutil --set HostName $HOSTNAME
+fi
 
 ###
 ### Xcode
