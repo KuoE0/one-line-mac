@@ -34,8 +34,8 @@ else
 	# Warning: /usr/bin occurs before /home/linuxbrew/.linuxbrew/bin
 	# Warning: Homebrew's bin was not found in your PATH.
 	# Warning: Homebrew's sbin was not found in your PATH but you have installed
-	export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-	export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
+	export PATH="$(brew --prefix)/bin:$PATH"
+	export PATH="$(brew --prefix)/sbin:$PATH"
 	brew doctor
 	if [ "$?" != "0" ]; then
 		echo "Something going wrong with Homebrew!"
