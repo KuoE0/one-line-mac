@@ -1,21 +1,21 @@
-# Bootstrap for Mac
+# Bootstrap Ninja
 
-Setup my macOS with one line command.
+Setup my macOS and Linux with one line command.
 
-## Requirement
+## Prerequisite
 
 - Setup SSH key to allow to access GitHub repo.
-- Make terminal have the permission with accessibility.
+- (macOS only) Make terminal have the permission with accessibility.
 	- System Preferences → Security & Privacy → (Tab) Privacy → Accessibility
 		- Add Terminal.app
 		- Check the checkbox
-- Create a certificate for lldb to make "--with-lldb" work when installing llvm.
-    - See [https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt](https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt)
-- Prepare the ssh key
+- (macOS only) Create a certificate for lldb to make "--with-lldb" work when installing llvm.
+	- Ignore if debugger is not necessary.
+    - See [https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt](https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt).
 
-## Other
+## Misc.
 
-### Use Touch ID to authenticate `sudo` command
+### (macOS) Use Touch ID to authenticate `sudo` command
 
 Add the following line to the top of /etc/pam.d/sudo.
 
