@@ -18,14 +18,14 @@
         "id": "409183694"
     },
     {
-        "name": "LINE",
-        "id": "539883307",
-        "desc": "IM application"
-    },
-    {
         "name": "LastPass",
         "id": "926036361",
         "desc": "Password manager"
+    },
+    {
+        "name": "LINE",
+        "id": "539883307",
+        "desc": "IM application"
     },
     {
         "name": "MoneyWiz 2",
