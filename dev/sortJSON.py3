@@ -15,6 +15,7 @@
 
 import json
 import sys
+from collections import OrderedDict
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -25,7 +26,7 @@ if __name__ == "__main__":
     sorted_data = None
 
     with open(filename) as f:
-        data = json.load(f)
+        data = json.load(f, object_pairs_hook=OrderedDict)
         sorted_data = sorted(data, key=lambda k: k['name'])
         sorted_data = json.dumps(sorted_data, indent=4)
     # clear file content
