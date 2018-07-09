@@ -54,32 +54,17 @@ else
 	fi
 fi
 
-# install command line packages
-ruby installPackages.rb
+# Install all packages and applications
+python add_brew_taps.py
+python install.py brew
+python install.py brew-cask
+python install.py pip3
 
-
-# make zsh as a regular shell
-ZSH_PATH="/usr/local/bin/zsh"
-if [ -e "$ZSH_PATH" ]; then
-	ZSH_REGULAR=$(grep "$ZSH_PATH" /etc/shells)
-	if [ "${ZSH_REGULAR:-x}" = x ]; then
-		sudo sh -c "echo $ZSH_PATH >> /etc/shells"
-	fi
-fi
-
-# use zsh as my defaut shell
-chsh -s /usr/local/bin/zsh $USER
-
-# setup dotfiles
-curl https://raw.githubusercontent.com/kuoe0/kuoe0-dotfile/master/setup.sh | bash -s $HOME/Works
-
-#
-# Mac App Store
-#
+# Install applications from Mac App Store
 if ! mas account &> /dev/null; then
 	# sign in
 	echo -n "Enter your Apple ID: "
 	read APPLE_ID
 	mas signin --dialog $APPLE_ID
 fi
-ruby installApplications.rb
+python install.py mas

@@ -21,3 +21,6 @@ else
 	echo "Bootstrapping Linux..."
 	bash bootstrap-linux.sh "$HOSTNAME"
 fi
+
+# setup dotfiles
+curl https://raw.githubusercontent.com/kuoe0/kuoe0-dotfile/master/setup.sh | /bin/bash -s $HOME/Works

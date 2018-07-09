@@ -15,7 +15,7 @@ if [ "$1" != "" ]; then
 fi
 
 # install apt tools
-python3 installAptPackage.py3
+python install.py apt
 
 # brew does not exist
 if ! which brew &> /dev/null; then
@@ -43,11 +43,7 @@ else
 	fi
 fi
 
-# install command line packages
-ruby installPackages.rb
-
-# use zsh as my defaut shell
-chsh -s /bin/zsh $USER
-
-# setup dotfiles
-curl https://raw.githubusercontent.com/kuoe0/kuoe0-dotfile/master/setup.sh | /bin/bash -s $HOME/Works
+# install all packages and applications
+python add_brew_taps.py
+python install.py brew
+python install.py pip3

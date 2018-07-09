@@ -356,6 +356,10 @@
         "desc": "download audio/video on YouTube"
     },
     {
-        "name": "zsh"
+        "name": "zsh",
+        "do_after": [
+            "grep -qF $(brew --prefix)/bin/zsh /etc/shells || sudo sh -c \"echo $(brew --prefix)/bin/zsh >> /etc/shells\"",
+            "chsh -s $(brew --prefix)/bin/zsh $USER"
+        ]
     }
 ]
