@@ -223,10 +223,6 @@
         "desc": "default application manager"
     },
     {
-        "name": "secrets",
-        "desc": "access hidden preferences on system"
-    },
-    {
         "name": "skype",
         "desc": "Skype client"
     },
