@@ -249,18 +249,10 @@
         "desc": "progress viewer"
     },
     {
-        "name": "python",
-        "args": [
-            "--framework",
-            "--universal"
-        ]
+        "name": "python"
     },
     {
-        "name": "python3",
-        "args": [
-            "--framework",
-            "--universal"
-        ]
+        "name": "python3"
     },
     {
         "name": "readline",
