@@ -21,6 +21,10 @@
         "name": "make"
     },
     {
+        "name": "meld",
+        "desc": "GUI diff tool"
+    },
+    {
         "name": "mosh"
     },
     {
