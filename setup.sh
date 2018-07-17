@@ -22,5 +22,9 @@ else
 	bash bootstrap-linux.sh "$HOSTNAME"
 fi
 
+if [ "$?" != "0" ]; then
+	exit
+fi
+
 # setup dotfiles
 curl https://raw.githubusercontent.com/kuoe0/kuoe0-dotfile/master/setup.sh | /bin/bash -s $HOME/Works
