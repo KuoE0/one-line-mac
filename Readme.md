@@ -13,6 +13,14 @@ Setup my macOS and Linux with one line command.
 	- Ignore if debugger is not necessary.
     - See [https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt](https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt).
 
+## Download & Run
+
+```
+$ curl -o bootstrap-ninja.zip https://github.com/kuoe0/bootstrap-ninja/archive/master.zip
+$ unzip bootstrap-ninja.zip
+$ cd bootstrap-ninja-master && ./setup.sh
+```
+
 ## Misc.
 
 ### (macOS) Use Touch ID to authenticate `sudo` command
