@@ -12,6 +12,10 @@
         "name": "gnome-tweak-tool"
     },
     {
+        "name": "guake",
+        "desc": "Drop-down terminal for GNOME Desktop Environment"
+    },
+    {
         "name": "htop"
     },
     {
