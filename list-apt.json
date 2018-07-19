@@ -1,5 +1,9 @@
 [
     {
+        "name": "copyq",
+        "desc": "clipboard manager"
+    },
+    {
         "name": "curl"
     },
     {
@@ -10,6 +14,10 @@
     },
     {
         "name": "gnome-tweak-tool"
+    },
+    {
+        "name": "gpaste",
+        "desc": "clipboard manager"
     },
     {
         "name": "guake",
