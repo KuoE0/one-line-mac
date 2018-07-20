@@ -55,7 +55,7 @@ else
 fi
 
 # Install all packages and applications
-python add_brew_taps.py
+python brew-tap.py
 python install.py brew
 python install.py brew-cask
 python install.py pip3
