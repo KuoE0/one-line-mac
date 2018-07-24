@@ -24,6 +24,10 @@
         "desc": "Unofficial Facebook Messenger client"
     },
     {
+        "name": "chrome-remote-desktop-host",
+        "desc": "Chrome Remote Desktop"
+    },
+    {
         "name": "chromium",
         "desc": "web browser"
     },
