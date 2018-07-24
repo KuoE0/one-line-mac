@@ -46,6 +46,10 @@
         "desc": "GNU core utilities"
     },
     {
+        "name": "cryfs",
+        "desc": "A cryptographic filesystem for the cloud"
+    },
+    {
         "name": "cscope",
         "desc": "dev tool for browsing C code"
     },
@@ -143,6 +147,10 @@
     {
         "name": "git-flow",
         "desc": "Git repo management tool"
+    },
+    {
+        "name": "gocryptfs",
+        "desc": "Encrypted overlay filesystem written in Go"
     },
     {
         "name": "googler",

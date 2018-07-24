@@ -4,6 +4,10 @@
         "desc": "clipboard manager"
     },
     {
+        "name": "cryfs",
+        "desc": "A cryptographic filesystem for the cloud"
+    },
+    {
         "name": "curl"
     },
     {
@@ -14,6 +18,10 @@
     },
     {
         "name": "gnome-tweak-tool"
+    },
+    {
+        "name": "gocryptfs",
+        "desc": "Encrypted overlay filesystem written in Go"
     },
     {
         "name": "gpaste",
