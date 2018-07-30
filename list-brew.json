@@ -361,5 +361,9 @@
             "grep -qF $(brew --prefix)/bin/zsh /etc/shells || sudo sh -c \"echo $(brew --prefix)/bin/zsh >> /etc/shells\"",
             "chsh -s $(brew --prefix)/bin/zsh $USER"
         ]
+    },
+    {
+        "name": "zsh-completions",
+        "desc": "auto-completion functions for ZSH"
     }
 ]
