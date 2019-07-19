@@ -81,24 +81,7 @@
         "desc": "CLI productivity booster"
     },
     {
-        "name": "ffmpeg",
-        "args": [
-            "--with-fdk-aac",
-            "--with-freetype",
-            "--with-frei0r",
-            "--with-libass",
-            "--with-libvpx",
-            "--with-opencore-amr",
-            "--with-openjpeg",
-            "--with-opus",
-            "--with-rtmpdump",
-            "--with-schroedinger",
-            "--with-speex",
-            "--with-sdl2",
-            "--with-theora",
-            "--with-tools",
-            "--with-x265"
-        ]
+        "name": "ffmpeg"
     },
     {
         "name": "figlet",
@@ -117,11 +100,7 @@
         "desc": "CLI fuzzy finder"
     },
     {
-        "name": "gcc",
-        "args": [
-            "--with-jit",
-            "--with-nls"
-        ]
+        "name": "gcc"
     },
     {
         "name": "gdb",
@@ -187,14 +166,7 @@
         "desc": "JSON parser"
     },
     {
-        "name": "llvm",
-        "args": [
-            "--with-graphviz",
-            "--with-lldb",
-            "--with-python",
-            "--with-shared-libs",
-            "--with-toolchain"
-        ]
+        "name": "llvm"
     },
     {
         "name": "macvim",
@@ -230,10 +202,7 @@
     },
     {
         "name": "node",
-        "desc": "NodeJS",
-        "args": [
-            "--with-full-icu"
-        ]
+        "desc": "NodeJS"
     },
     {
         "name": "p7zip",
