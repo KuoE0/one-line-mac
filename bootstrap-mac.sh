@@ -45,10 +45,7 @@ if ! which brew &> /dev/null; then
 	exit 255
 else
 	brew doctor
-	if [ "$?" = "0" ]; then
-		# use llvm to build
-		brew --env --use-llvm
-	else
+	if [ "$?" != "0" ]; then
 		echo "Something going wrong with Homebrew!"
 		exit 255
 	fi
