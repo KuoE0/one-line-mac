@@ -32,10 +32,6 @@
         "desc": "web browser"
     },
     {
-        "name": "clyang-welly",
-        "desc": "BBS client"
-    },
-    {
         "name": "coconutbattery",
         "desc": "battery status"
     },
@@ -268,6 +264,10 @@
     {
         "name": "webpquicklook",
         "desc": "quick look for *.webp"
+    },
+    {
+        "name": "welly",
+        "desc": "BBS client"
     },
     {
         "name": "writefull",
