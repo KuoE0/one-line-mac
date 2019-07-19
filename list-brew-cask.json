@@ -159,10 +159,6 @@
         "desc": "The modern video player for macOS."
     },
     {
-        "name": "insomniax",
-        "desc": "Disable the sleep mode"
-    },
-    {
         "name": "iterm2",
         "desc": "terminal"
     },
@@ -284,9 +280,5 @@
     {
         "name": "xquartz",
         "desc": "X Window System"
-    },
-    {
-        "name": "xtrafinder",
-        "desc": "Finder enhancement"
     }
 ]
