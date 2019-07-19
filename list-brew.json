@@ -59,7 +59,10 @@
     },
     {
         "name": "ddd",
-        "desc": "graphical GDB"
+        "desc": "graphical GDB",
+        "do_before": [
+            "[ $(uname) = 'Darwin' ] && brew cask install xquartz"
+        ]
     },
     {
         "name": "dos2unix",
