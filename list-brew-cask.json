@@ -151,6 +151,10 @@
         "desc": "web browser"
     },
     {
+        "name": "google-drive-file-stream",
+        "desc": "File streaming client for Google Drive"
+    },
+    {
         "name": "iina",
         "desc": "The modern video player for macOS."
     },
