@@ -187,6 +187,9 @@
         "desc": "web browser"
     },
     {
+        "name": "osxfuse"
+    },
+    {
         "name": "packet-peeper",
         "desc": "network protocol analyzer"
     },

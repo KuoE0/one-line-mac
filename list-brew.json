@@ -150,7 +150,10 @@
     },
     {
         "name": "gocryptfs",
-        "desc": "Encrypted overlay filesystem written in Go"
+        "desc": "Encrypted overlay filesystem written in Go",
+        "do_before": [
+            "[ $(uname) = 'Darwin' ] && brew cask install osxfuse"
+        ]
     },
     {
         "name": "googler",
