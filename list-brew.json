@@ -232,6 +232,9 @@
         "desc": "progress viewer"
     },
     {
+        "name": "pyenv"
+    },
+    {
         "name": "python"
     },
     {
