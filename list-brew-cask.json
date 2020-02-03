@@ -179,6 +179,10 @@
         "desc": "touchpad utility"
     },
     {
+        "name": "notion",
+        "desc": "Notion Client"
+    },
+    {
         "name": "opera",
         "desc": "web browser"
     },
