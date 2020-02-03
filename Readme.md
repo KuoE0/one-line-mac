@@ -5,13 +5,14 @@ Setup my macOS and Linux with one line command.
 ## Prerequisite
 
 - Setup SSH key to allow to access GitHub repo.
+- (macOS only) Sign-in App Store
 - (macOS only) Make terminal have the permission with accessibility.
 	- System Preferences → Security & Privacy → (Tab) Privacy → Accessibility
 		- Add Terminal.app
 		- Check the checkbox
 - (macOS only) Create a certificate for lldb to make "--with-lldb" work when installing llvm.
 	- Ignore if debugger is not necessary.
-    - See [https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt](https://llvm.org/svn/llvm-project/lldb/trunk/docs/code-signing.txt).
+    - See [https://opensource.apple.com/source/lldb/lldb-69/docs/code-signing.txt](https://opensource.apple.com/source/lldb/lldb-69/docs/code-signing.txt)
 
 ## Download & Run
 
