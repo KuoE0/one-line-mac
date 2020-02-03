@@ -58,13 +58,6 @@
         "desc": "client-side URL transfers"
     },
     {
-        "name": "ddd",
-        "desc": "graphical GDB",
-        "do_before": [
-            "[ $(uname) = 'Darwin' ] && brew cask install xquartz"
-        ]
-    },
-    {
         "name": "dos2unix",
         "desc": "convert text file format from dos to unix"
     },
