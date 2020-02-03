@@ -31,3 +31,10 @@ Add the following line to the top of /etc/pam.d/sudo.
 ```
 auth sufficient pam_tid.so
 ```
+## ToDo
+
+Install the packages that need password to install first
+- [brew] zsh (when do `chsh`)
+- [cask] google-drive-file-stream
+- [cask] adobe-creative-cloud
+- [cask] osxfuse (gocryptfs's dependency)
