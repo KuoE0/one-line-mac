@@ -14,14 +14,15 @@
 """
 import os
 
+
 def run_system_cmd(cmd):
     print cmd
     os.system(cmd)
 
-tap_list = ["caskroom/cask",
-            "caskroom/versions",
-            "caskroom/fonts",
-            "neovim/neovim",
+
+tap_list = ["homebrew/cask",
+            "homebrew/cask-versions",
+            "homebrew/cask-fonts",
             "railwaycat/emacsmacport"]
 
 for tap in tap_list:
@@ -29,4 +30,3 @@ for tap in tap_list:
     run_system_cmd(cmd)
 
 run_system_cmd("brew update")
-
