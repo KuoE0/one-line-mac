@@ -232,13 +232,12 @@
         "desc": "progress viewer"
     },
     {
-        "name": "pyenv"
+        "name": "python",
+        "desc": "Python 3"
     },
     {
-        "name": "python"
-    },
-    {
-        "name": "python3"
+        "name": "python@2",
+        "desc": "Python 2"
     },
     {
         "name": "readline",
