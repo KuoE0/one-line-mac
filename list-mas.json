@@ -28,6 +28,11 @@
         "desc": "IM application"
     },
     {
+        "name": "Microsoft To Do",
+        "id": "1274495053",
+        "desc": "To-do list application"
+    },
+    {
         "name": "MoneyWiz 2",
         "id": "949724400",
         "desc": "finance record"
@@ -81,11 +86,6 @@
     {
         "name": "VPN Unlimited",
         "id": "727593140"
-    },
-    {
-        "name": "Wunderlist",
-        "id": "410628904",
-        "desc": "To-do list application"
     },
     {
         "name": "Yoink",
