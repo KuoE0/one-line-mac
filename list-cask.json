@@ -36,6 +36,10 @@
         "desc": "battery status"
     },
     {
+        "name": "cryptomator",
+        "desc": "Cryptomator Client"
+    },
+    {
         "name": "dropbox",
         "desc": "Dropbox client"
     },
